@@ -1,0 +1,241 @@
+.flexbox {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	align-items: none;
+}
+
+header {
+	background: var(--grey);
+	width: 100%;
+	padding: 1rem;
+	height: 5rem;
+	margin-bottom: 1rem;
+}
+
+header div h1{
+	font-size: 1.5rem;
+	font-weight: 700
+}
+header div {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	gap: 1rem;
+	align-items: center;
+}
+header div h1 span {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 400;
+	font-size: 1.3rem;
+	text-transform: uppercase;	
+}
+header div .imgbox {
+	max-width: 60px;
+	max-height: 60px;
+}
+
+header div .imgbox img {
+	width: 100%;
+}
+
+header div ul {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+
+header div ul li a {
+	transition: .2s;
+}
+
+header div ul li a:hover {
+	font-size: 1.2rem;
+	transform: translateY(-2px);
+}
+
+/* =========== MAIN SECTION =============*/
+
+main {
+	width:100%;
+	min-height: calc(100vh - 7rem);
+}
+
+main #sidebar {
+	width: 23%;
+
+}
+
+main #sidebar {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: initial;
+	margin-top: 2rem	;
+}
+
+main #sidebar aside ul {
+	background: var(--grey);
+	padding: 1rem;
+	border-radius: 8px;
+	box-shadow: -15px -12px var(--second-green);
+	z-index: 2;
+	position: relative;
+}
+
+main #sidebar aside ul li{
+	padding: .5rem 0;
+}
+
+main #sidebar aside ul #last{
+	padding-bottom: 2.5rem;
+}
+
+main #content {
+	flex: 1;
+} 
+
+main #content article .title {
+	padding-bottom: 3rem;
+}
+
+main #content article {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+main #content article p{
+	padding: 1.5rem 5rem;
+	text-align: justify;
+}
+
+main #content article .article{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+main #content article .node-faixa{
+	max-width: 500px;
+	max-height: 200px;
+	padding: 1rem 0;
+}
+
+main #content article .node-faixa img{
+	width: 100%;
+	height: 100%;
+	box-shadow: 5px 5px 5px rgba(26, 26, 26, 0.356);
+}
+
+hr{
+	color: var(--grey);
+}
+
+.end-flex{
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.end-flex h4 {
+	padding: 1rem;
+}
+
+.end-flex h5{
+	padding-left: 2rem;
+	color: rgb(172, 172, 172);
+}
+
+/* =========== FOOTER SECTION =============*/
+
+.footer-flex{
+	display: flex;
+	background-color: var(--black);
+	justify-content: space-around;
+	align-items: center;
+	padding: 2rem;
+}
+
+.footer-flex .footer-text p, h5{
+	color: white;
+	padding: 1rem;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.footer-flex .footer-text .footer-title{
+	font-weight: 700;
+	font-size: 1.3rem;
+}
+
+.footer-flex .footer-img{
+	max-width: 100px;
+	max-height: 100px;
+	padding: 1rem;
+}
+
+.footer-flex .footer-img img{
+	height: 100%;
+	width: 100%;
+}
+
+.footer-flex .footer-text #webhost a{
+	color: var(--second-green);
+}
+
+
+/* =========== MEDIA SECTION =============*/
+
+@media (max-width: 950px) {
+	main #content article p{
+		font-size: .8rem;
+		padding: 1.5rem 3rem;
+	}
+
+	main #sidebar aside ul li {
+		font-size: .8rem;
+	}
+}
+
+@media (max-width: 750px) {
+	main #content article p{
+		font-size: .7rem;
+		padding: 1.5rem 2rem;
+	}
+
+	.footer-flex .footer-text .footer-title{
+		font-size: .8rem;
+	}
+
+	.footer-flex .footer-text h5{
+		font-size: .7rem;
+	}
+
+	main #sidebar {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 550px) {
+	main #content article p{
+		font-size: .8rem;
+		padding: 1.5rem;
+	}
+
+	main #sidebar aside ul li {
+		font-size: .7rem;
+	}
+
+	.footer-flex .footer-text .footer-title{
+		font-size: .7rem;
+	}
+
+	.footer-flex .footer-text h5{
+		font-size: .6rem;
+	}
+}
