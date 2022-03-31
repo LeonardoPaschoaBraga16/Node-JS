@@ -5,40 +5,80 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+
 	<!-- General Configurations --> 
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="shortcut icon" href="./assets/logo.png" type="image/png">
 	<title>NodeTicle</title>
+	
+	<!-- AOS ANIMATION LIBRARY-->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	<!-- Import of google fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- DM Sans -->
 	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> <!-- Libre -->
-
+	
 	<!-- Own Styles -->
 	<link rel="stylesheet" type="text/css" href="./styles/global.css"/>
 	<link rel="stylesheet" type="text/css" href="./styles/content.css"/>
+
+	<!-- JQUERY-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <body>
 	<!-- Header of the webpage -->
 	<header class="flexbox">
 		<div>
-			<h1>Node <span>Js</span></h1>
-			<div class="imgbox">
+			<h1 
+			data-aos="fade-down"
+			data-aos-delay="100"
+			data-aos-duration="1000"
+			>
+				Node <span>Js</span>
+			</h1>
+			<div class="imgbox" 
+			data-aos="fade-down"
+			data-aos-delay="200"
+			data-aos-duration="1000">
 				<img src="./assets/logo.png" alt="logo do nodejs"/>
 			</div>
 		</div>
 		<div>
 			<ul>
-				<li><a href="#">Instalar</a></li>
-				<li><a href="#">Repositório</a></li>
-				<li><a href="#">Sobre</a></li>
+				<li           
+				data-aos="fade-down"
+				data-aos-delay="300"
+				data-aos-duration="1000"
+				>
+					<a href="#">Instalar</a>
+				</li>
+				<li           
+				data-aos="fade-down"
+				data-aos-delay="200"
+				data-aos-duration="1000"
+				>
+					<a href="#">Repositório</a>
+				</li>
+				<li           
+				data-aos="fade-down"
+				data-aos-delay="100"
+				data-aos-duration="1000"
+				>
+					<a href="./about.html">Sobre</a>
+				</li>
 			</ul>
 		</div>
 	</header>
 
 	<!-- main section -->
-	<main class="flexbox">
+	<main 
+	class="flexbox"
+	data-aos="zoom-out"
+	data-aos-delay="100"
+	data-aos-duration="1000"
+	>
 		<!-- sidebar section -->
 		<section id="sidebar">
 			<!-- The sidebar will here into aside tag -->
@@ -50,11 +90,15 @@
 					<li id="last"><a href="#">NPM</a></li>
 				</ul>
 			</aside>
+
 		</section>
 
 
 		<!-- article section --> 
-		<section id="content" class="flexbox">
+		<section
+		 	id="content" 
+			class="flexbox"
+		 >
 			<!-- Text will here into article tag -->
 			<article>
 				<div class="title">
@@ -64,9 +108,9 @@
 					<p>
 						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. like readable English. model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
 					</p>
-					<div class="node-faixa">
-						<img src="assets/node-faixa.png" alt="Faixa Node JS">
-					</div>
+					
+					<img src="assets/node-faixa.png" alt="Faixa Node JS">
+					
 					<p>
 						Why do we use it?
 						It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
@@ -80,13 +124,18 @@
 	<div id="end" class="end-flex">
 		<hr>
 		<h4>Ferramentas Utilizadas</h4>
-		<h5>lorem ipsum.com; lorem ipsum.com; lorem ipsum.com;</h5>
+		<h5>PHP8; HTML; CSS3; JavaScript; Fonts Google; Figma.com; Xampp; Visual Studio Code</h5>
 	</div>
 
 	<!-- Footer of the webpage -->	
 	<footer class="footer-flex">
 		<!--Here will be the footer-->
-		<div class="footer-text">
+		<div 
+		class="footer-text"
+		data-aos="fade-in"
+		data-aos-delay="100"
+		data-aos-duration="900"
+		>
 
 			<p class="footer-title">
 				Etec de Carapicuíba
@@ -98,7 +147,12 @@
 			</h5>
 		</div>
 
-		<div class="footer-text">
+		<div 
+		class="footer-text" 
+		data-aos="fade-in"
+		data-aos-delay="200"
+		data-aos-duration="900"
+		>
 
 			<p class="footer-title">
 				WebSite em PHP
@@ -111,9 +165,37 @@
 
 		</div>
 
-		<div class="footer-img">
+		<div 
+		class="footer-img"
+		data-aos="fade-in"
+		data-aos-delay="300"
+		data-aos-duration="900">
 			<img src="assets/npm.png" alt="Logo NPN">
 		</div>
 	</footer>
+	
+	<!-- AOS -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+
+	<!-- FIX SideBar on Scroll -->
+	<script>
+		    let el = document.querySelector('#sidebar aside ul');
+			let elCoordenadas = el.getBoundingClientRect();
+		$(function(){   
+		  var links = $('#sidebar aside ul');   
+		  $(window).scroll(function () { 
+			  if ($(this).scrollTop() > elCoordenadas.y) { 
+				  links.addClass("internal_links_fixed");
+				 //$('body').css('padding-top', 70);
+			  } else { 
+				  links.removeClass("internal_links_fixed"); 
+				 //$('body').css('padding-top', 0);
+			  } 
+		  });  
+		});
+	</script> 
 </body>
 </html>

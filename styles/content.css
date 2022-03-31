@@ -4,7 +4,7 @@
 	gap: 1rem;
 	justify-content: space-between;
 	padding: 1rem 2rem;
-	align-items: none;
+	align-items: initial;
 }
 
 header {
@@ -13,6 +13,10 @@ header {
 	padding: 1rem;
 	height: 5rem;
 	margin-bottom: 1rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
 }
 
 header div h1{
@@ -49,24 +53,25 @@ header div ul {
 }
 
 header div ul li a {
-	transition: .2s;
+	transition: .3s;
 }
 
 header div ul li a:hover {
-	font-size: 1.2rem;
-	transform: translateY(-2px);
+	font-size: 1.3rem;
 }
 
 /* =========== MAIN SECTION =============*/
 
 main {
 	width:100%;
+	margin-top: 7rem;
 	min-height: calc(100vh - 7rem);
+
 }
 
 main #sidebar {
 	width: 23%;
-
+	
 }
 
 main #sidebar {
@@ -76,18 +81,31 @@ main #sidebar {
 	align-items: initial;
 	margin-top: 2rem	;
 }
+main #sidebar aside {
+	width: 80%;
+}
+
 
 main #sidebar aside ul {
 	background: var(--grey);
 	padding: 1rem;
 	border-radius: 8px;
 	box-shadow: -15px -12px var(--second-green);
-	z-index: 2;
-	position: relative;
+	
+}
+
+ul.internal_links_fixed {
+	display: block;
+	top: 7rem;
+    left:60px;
+    z-index: 999;
+	position:sticky;
+	transition: all 0.3s
 }
 
 main #sidebar aside ul li{
 	padding: .5rem 0;
+	font-size: larger;
 }
 
 main #sidebar aside ul #last{
@@ -98,37 +116,27 @@ main #content {
 	flex: 1;
 } 
 
-main #content article .title {
-	padding-bottom: 3rem;
+main #content article {
+	text-align: center; /* To centralize Paragraphs and Images*/
 }
 
-main #content article {
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
+main #content article .title {
+	padding-bottom: 3rem;
+	font-size: 2.2rem;
 }
 
 main #content article p{
-	padding: 1.5rem 5rem;
-	text-align: justify;
+	padding: 2rem 2.5rem;
+	font-size: 1.3rem;
+	color: #131314;
+	text-align: justify; /* Here we're setting the text-align: justify to every paragraph into article*/
 }
 
-main #content article .article{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-main #content article .node-faixa{
-	max-width: 500px;
-	max-height: 200px;
-	padding: 1rem 0;
-}
-
-main #content article .node-faixa img{
-	width: 100%;
-	height: 100%;
+/* We don't need of a div around the img, because the img is already into the article scope.
+So here we just define the width and height with percentage*/
+main #content article img{
+	width: 80%;	
+	height: 80%;
 	box-shadow: 5px 5px 5px rgba(26, 26, 26, 0.356);
 }
 
@@ -148,10 +156,15 @@ hr{
 
 .end-flex h5{
 	padding-left: 2rem;
-	color: rgb(172, 172, 172);
+	color: grey
 }
 
 /* =========== FOOTER SECTION =============*/
+
+footer{
+	min-height: 20rem;
+	font-size: 3rem;
+}
 
 .footer-flex{
 	display: flex;
@@ -189,53 +202,53 @@ hr{
 }
 
 
-/* =========== MEDIA SECTION =============*/
+/* =========== RESPONSIVENESS SECTION =============*/
 
-@media (max-width: 950px) {
-	main #content article p{
-		font-size: .8rem;
-		padding: 1.5rem 3rem;
+@media(max-width: 980px){
+
+	main.flexbox{
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
 	}
-
-	main #sidebar aside ul li {
-		font-size: .8rem;
-	}
-}
-
-@media (max-width: 750px) {
-	main #content article p{
-		font-size: .7rem;
-		padding: 1.5rem 2rem;
-	}
-
-	.footer-flex .footer-text .footer-title{
-		font-size: .8rem;
-	}
-
-	.footer-flex .footer-text h5{
-		font-size: .7rem;
-	}
-
 	main #sidebar {
-		flex-direction: column;
+		width: 100%;
 	}
-}
 
-@media (max-width: 550px) {
+	main #sidebar aside {
+		width: 80%;
+	}
+
 	main #content article p{
-		font-size: .8rem;
-		padding: 1.5rem;
+		padding: 1.5rem 0;
 	}
 
-	main #sidebar aside ul li {
-		font-size: .7rem;
+	.footer-flex {
+		flex-direction: column-reverse;
+		gap: 4rem;
 	}
 
-	.footer-flex .footer-text .footer-title{
-		font-size: .7rem;
+	ul.internal_links_fixed {
+		display: block;
+		top: 0;
+		left:0;
+		z-index: 1;
+		position:relative;
 	}
 
-	.footer-flex .footer-text h5{
-		font-size: .6rem;
+
+}
+@media(max-width: 720px){
+
+	main.flexbox{
+		padding: 0;
+	}
+
+	main #content article img{
+		width: 100%;	
+		height: 100%;
 	}
 }
+
+
