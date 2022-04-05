@@ -1,0 +1,283 @@
+.flexbox {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	align-items: initial;
+}
+
+header {
+	background: var(--grey);
+	width: 100%;
+	padding: 1rem;
+	height: 5rem;
+	margin-bottom: 1rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+header div h1{
+	font-size: 1.5rem;
+	font-weight: 700
+}
+header div {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	gap: 1rem;
+	align-items: center;
+}
+header div h1 span {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 400;
+	font-size: 1.3rem;
+	text-transform: uppercase;	
+}
+header div .imgbox {
+	max-width: 60px;
+	max-height: 60px;
+}
+
+header div .imgbox img {
+	width: 100%;
+}
+
+header div ul {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+
+header div ul li a {
+	transition: .3s;
+}
+
+header div ul li a:hover {
+	font-size: 1.3rem;
+}
+
+/* =========== MAIN SECTION =============*/
+
+main {
+	width:100%;
+	margin-top: 7rem;
+	min-height: calc(100vh - 7rem);
+
+}
+
+main #sidebar {
+	width: 23%;
+	
+}
+
+main #sidebar {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: initial;
+	margin-top: 2rem	;
+}
+main #sidebar aside {
+	width: 80%;
+}
+
+
+main #sidebar aside ul {
+	background: var(--grey);
+	padding: 1rem;
+	border-radius: 8px;
+	box-shadow: -15px -12px var(--second-green);
+	
+}
+
+ul.internal_links_fixed {
+	display: block;
+	top: 7rem;
+    left:60px;
+    z-index: 999;
+	position:sticky;
+	transition: all 0.3s
+}
+
+main #sidebar aside ul li{
+	padding: .5rem 0;
+	font-size: larger;
+}
+
+main #sidebar aside ul #last{
+	padding-bottom: 2.5rem;
+}
+
+main #content {
+	flex: 1;
+} 
+
+main #content article {
+	text-align: center; /* To centralize Paragraphs and Images*/
+}
+
+main #content article .title {
+	padding-bottom: 3rem;
+	font-size: 2.2rem;
+}
+
+main #content article p{
+	padding: 1rem 2.5rem;
+	font-size: 1.3rem;
+	color: #131314;
+	text-align: justify; /* Here we're setting the text-align: justify to every paragraph into article*/
+}
+
+/* We don't need of a div around the img, because the img is already into the article scope.
+So here we just define the width and height with percentage*/
+main #content article img{
+	box-shadow: 5px 5px 5px rgba(26, 26, 26, 0.356);
+	width: 80%;	
+	height: 80%;
+	margin: 3rem 0;
+}
+
+main #content article ul{
+	text-align: left;
+	padding: 0 2.5rem;
+}
+
+main #content article ul li{
+	margin: .8rem 0;
+}
+
+main #content article h2{
+	font-size: 2rem;
+	margin: 1.5rem 0;
+}
+
+main #content article h3{
+	font-size: 1.7rem;
+	margin: 1.3rem 0;
+}
+
+main #content article h4{
+	font-size: 1.5rem;
+	margin: 1.2rem 0;
+}
+
+main #content article a{
+	color: var(--main-green);
+}
+
+hr{
+	color: var(--grey);
+}
+
+.end-flex{
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.end-flex h4 {
+	padding: 1rem;
+}
+
+.end-flex h5{
+	padding-left: 2rem;
+	color: grey
+}
+
+/* =========== FOOTER SECTION =============*/
+
+footer{
+	min-height: 20rem;
+	font-size: 3rem;
+}
+
+.footer-flex{
+	display: flex;
+	background-color: var(--black);
+	justify-content: space-around;
+	align-items: center;
+	padding: 2rem;
+}
+
+.footer-flex .footer-text p, h5{
+	color: white;
+	padding: 1rem;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.footer-flex .footer-text .footer-title{
+	font-weight: 700;
+	font-size: 1.3rem;
+}
+
+.footer-flex .footer-img{
+	max-width: 100px;
+	max-height: 100px;
+	padding: 1rem;
+}
+
+.footer-flex .footer-img img{
+	height: 100%;
+	width: 100%;
+}
+
+.footer-flex .footer-text #webhost a{
+	color: var(--second-green);
+}
+
+
+/* =========== RESPONSIVENESS SECTION =============*/
+
+@media(max-width: 980px){
+
+	main.flexbox{
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+	}
+	main #sidebar {
+		width: 100%;
+	}
+
+	main #sidebar aside {
+		width: 80%;
+	}
+
+	main #content article p{
+		padding: 1.5rem 0;
+	}
+
+	.footer-flex {
+		flex-direction: column-reverse;
+		gap: 4rem;
+	}
+
+	ul.internal_links_fixed {
+		display: block;
+		top: 0;
+		left:0;
+		z-index: 1;
+		position:relative;
+	}
+
+
+}
+@media(max-width: 720px){
+
+	main.flexbox{
+		padding: 0;
+	}
+
+	main #content article img{
+		width: 100%;	
+		height: 100%;
+	}
+}
+
+

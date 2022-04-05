@@ -1,0 +1,154 @@
+
+/* =========== MAIN SECTION =============*/
+
+/* =========== ARTICLE SECTION =============*/
+
+main #about article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main #about article .etec{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main #about article .etec .title {
+    font-size: 2rem;
+}
+
+main #about article .etec .article{
+    display: flex;
+    gap: 6rem;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+main #about article .etec .article p{
+    text-align: justify;
+}
+
+main #about article .etec .article .img-etec{
+    padding-right: 4rem;
+}
+
+main #about article .etec .article .img-etec img{
+    border-radius: 5px;
+    box-shadow: -15px 14px 5px rgba(0, 0, 0, 0.61);
+}
+
+/* =========== SOCIAL SECTION =============*/
+
+main #about article .social {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+main #about article .social .sub-title {
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+}
+
+main #about article .social .us{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #b4e481;
+    border-radius: 15px;
+    box-shadow: -15px 14px #71a13f;
+}
+
+main #about article .social .us .leo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main #about article .social .us .leo img{
+    padding-bottom: .5rem;
+    padding-top: 1.5rem;
+}
+
+main #about article .social .us .leo .coluna{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main #about article .social .us .leo .coluna p{
+    padding: .5rem 7rem 0 7rem;
+    text-align: justify;
+}
+
+main #about article .social .us .victor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main #about article .social .us .victor img{
+    padding-bottom: .5rem;
+    padding-top: 1.5rem;
+}
+
+main #about article .social .us .victor .coluna{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main #about article .social .us .victor .coluna p{
+    padding: .5rem 7rem 0 7rem;
+    text-align: justify;
+}
+
+main #about article .social .us .icons {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+main #about article .social .us .icons i:hover{
+    color: var(--main-green);
+    transition: .2s;
+}
+
+/* =========== ACADEMY SECTION =============*/
+
+main #about article .sub-title {
+    font-size: 1.5rem;
+    padding: 5rem 0 5rem 0;
+}
+
+main #about article .academy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main #about article .academy .etec {
+    display: flex;
+    flex-direction: column;
+}
+
+main #about article .academy .img-etec img {
+    box-shadow: -15px 14px 5px rgba(0, 0, 0, 0.61);
+    border-radius: 5px;
+}
+
+main #about article .academy .etec h5{
+    color: grey;
+    font-size: 1.2rem;
+}
+
+main #about article .academy .text {
+    padding: 3rem 6rem 8rem 6rem;
+}
+
+main #about article .academy .text p{
+    text-align: justify;
+    font-size: 1.2rem;
+}
