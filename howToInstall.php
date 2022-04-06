@@ -56,21 +56,21 @@
             data-aos-delay="300"
             data-aos-duration="1000"
           >
-            <a href="index.html">Conceitos</a>
+            <a href="index.php">Conceitos</a>
           </li>
           <li
             data-aos="fade-down"
             data-aos-delay="200"
             data-aos-duration="1000"
           >
-            <a href="./tutorial.html">Tutorial</a>
+            <a href="./tutorial.php">Tutorial</a>
           </li>
           <li
             data-aos="fade-down"
             data-aos-delay="100"
             data-aos-duration="1000"
           >
-            <a href="./about.html">Sobre</a>
+            <a href="./about.php">Sobre</a>
           </li>
         </ul>
       </div>

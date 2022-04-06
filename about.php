@@ -59,13 +59,13 @@
       <div>
         <ul>
           <li data-aos="fade-down" data-aos-delay="400" data-aos-duration="200">
-            <a href="./index.html">Conceitos</a>
+            <a href="./index.php">Conceitos</a>
           </li>
           <li data-aos="fade-down" data-aos-delay="300" data-aos-duration="200">
-            <a href="./howToInstall.html">Como Instalar</a>
+            <a href="./howToInstall.php">Como Instalar</a>
           </li>
           <li data-aos="fade-down" data-aos-delay="200" data-aos-duration="200">
-            <a href="./tutorial.html">Tutorial</a>
+            <a href="./tutorial.php">Tutorial</a>
           </li>
         </ul>
       </div>
