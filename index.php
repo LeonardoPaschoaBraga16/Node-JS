@@ -9,7 +9,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/logo.png" type="image/png" />
-    <title>NodeTicle</title>
+    <title>Node Article</title>
 
     <!-- AOS ANIMATION LIBRARY-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -56,14 +56,14 @@
             data-aos-delay="300"
             data-aos-duration="1000"
           >
-            <a href="#">Como Instalar</a>
+            <a href="./howToInstall.html">Como Instalar</a>
           </li>
           <li
             data-aos="fade-down"
             data-aos-delay="200"
             data-aos-duration="1000"
           >
-            <a href="#">Tutorial</a>
+            <a href="./tutorial.html">Tutorial</a>
           </li>
           <li
             data-aos="fade-down"
@@ -206,10 +206,8 @@
 
             <p>O processador de Script pode ser chamado com:</p>
 
-            <p>
-              $> node {script name} <br>
-              E.g.: $> node index.js
-            </p>
+            <p class="code">$> node {script name}</p>
+            <p class="code"> $> node index.js</p>
 
             <p>O evento de loop é continuamente checado para verificar se há algum processo novo na fila para o NodeJS executar.</p>
 
@@ -251,10 +249,8 @@
               
                 <p>Quando você quer rodar uma aplicação em node, você não especifica todos os arquivos do projeto. Você apenas específica o arquivo de entrada. Por que o projeto pode conter mil arquivos em diferentes diretórios etc. Então nós importamos um arquivo para outro e assim sucessivamente, até chegar no arquivo index (índice) da aplicação, o qual é responsável por executar tudo. Essas importações fazemos através do module system, usando a sintaxe:</p>
 
-                <p>
-                  module. exports = {nome_da_variavel_ou_funcao}; // para exportar <br>
-                  const dado_importado = require(“nome_do_arquivo_que_esta_exportando”) // para Importar
-                </p>
+                <p class="code">module.exports = {nome_da_variavel_ou_funcao}; </p>
+                <p class="code" style="text-align: left;">const dado_importado = require(“nome_do_arquivo_que_esta_exportando”)</p>
 
                 <p>Sistema de modulo do Node cria uma árvore de dependência, o qual específica para o node quais arquivos são necessários para rodar a aplicação.</p>
                 
@@ -280,7 +276,7 @@
 
                   <p>Quando alguma dependência é instalada, nós podemos requisitar o pacote passando o nome da dependência instalada (biblioteca), ex:</p>
 
-                  <p>
+                  <p class="code">
                     $> npm i express <br>
                     <br>
                     // In index.js <br>
@@ -334,7 +330,7 @@
 
               <p>A primeira coisa que fazemos ao usar o npm é iniciar um projeto. Para isso fazemos o:</p>
 
-              <p>$> npm init –y</p>
+              <p class="code">$> npm init –y</p>
 
               <p>Esse comando nos permite iniciar um package.json no diretório /~ da aplicação o qual vem com informações básicas pré configuradas como explicado anteriormente quando falamos de como funciona. </p>
 
